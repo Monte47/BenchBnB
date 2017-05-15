@@ -10,9 +10,11 @@ class BenchIndexItem extends React.Component {
   render() {
     let { description } = this.props.bench;
     return(
-      <div className="Bench-Index-Item">
-        <span>{description}</span>
-      </div>
+      <li>
+        <div className="Bench-Index-Item">
+          <span>{description}</span>
+        </div>
+      </li>
     );
   }
 }
