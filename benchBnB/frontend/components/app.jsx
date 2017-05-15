@@ -1,7 +1,9 @@
 import React from 'react';
 import GreetingContainer from './greeting_container';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SessionFormContainer from './session_form_container';
+import { AuthRoute } from '../util/route_util';
+import BenchIndexContainer from './bench_index_container';
 
 const App = () => (
   <div>
@@ -9,9 +11,10 @@ const App = () => (
       <h1> Bench BnB </h1>
       <GreetingContainer />
     </header>
+    <AuthRoute path='/login' component={SessionFormContainer} />
+    <AuthRoute path='/signup' component={SessionFormContainer} />
+    <Route exact path="/" component={ BenchIndexContainer } />
 
-    <Route path='/login' component={SessionFormContainer} />
-    <Route path='/signup' component={SessionFormContainer} />
   </div>
 );
 
