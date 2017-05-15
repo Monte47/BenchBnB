@@ -13,7 +13,6 @@ class BenchIndex extends React.Component {
 
   render() {
     let { benches } = this.props;
-    debugger
     return (
       <div>
         <h1>Benches: </h1>
